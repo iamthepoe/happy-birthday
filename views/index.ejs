@@ -5,11 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>AAA</title>
 	<%-include("partials/bootstrapstyle.ejs");%>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-	<div class="container d-flex justify-content-center">
-		<h1>Feliz aniversário,<%=name%>!</h1>	
+	<div style="display: none;">
+		<span id="color0"><%=colors[0]%></span>
+		<span id="color1"><%=colors[1]%></span>
+		<span id="color2"><%=colors[2]%></span>
+		<span id="isDark"><%=isDark%></span>
 	</div>
+	<header class="container-fluid" id="s0">
+		<h1>Feliz aniversário, <span id="name"><%= name %>!</span></h1>
+	</header>
+	<section class="container-fluid" id="s1">
+		<p><%=message%></p>
+	</section>
+	<footer class="container-fluid" id="s2"><h3 onclick="msg()">&#128150;</h3></footer>
+	<script type="text/javascript" src="/script/script.js"></script>
+	
 	
 </body>
 </html>
